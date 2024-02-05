@@ -1,7 +1,14 @@
-<p>residence works!</p>
-
+<h1>  Residences : </h1>
 <ul>
-    <li *ngFor="let r of listResidences">
-        {{r.name}} - {{r.address}} - <img [src]="r.image" >
+    <li *ngFor="let r of listResidences; let i =index; let f=first; let l=last">
+
+    index : {{i}} -  {{r.name}} - {{r.address}} - <img [src]="r.image" >- <button (click)="show(r.id)">show appartements </button>
+    <div *ngFor="let appartement of list">
+        <li *ngIf="r.id == appartement.residence.id">
+            {{appartement.appartNum}}
+        </li>
+    </div>
+
+
      </li>
 </ul>

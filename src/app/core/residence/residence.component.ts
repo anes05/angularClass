@@ -8,8 +8,18 @@ import { Residence } from '../models/Residence';
   styleUrls: ['./residence.component.css']
 })
 export class ResidenceComponent {
+  list:Apartement[]=[];
+show(id:number) {
+  this.list=[];
+  for(let a of this.listApartments){
+    if (a.residence.id==id){
+      this.list.push(a);
+    }
+  }
+  console.log(this.list);
+}
   listResidences:Residence[]=[
-    {id:1,"name": "El fel","address":"Borj Cedria", "image":"../../assets/images/R1.jpeg"},
+    {id:1,"name": "El fel","address":"Borj Cedria", "image":"../../assets/images/OIP.jpeg"},
      {id:2,"name": "El yasmine", "address":"Ezzahra","image":"../../assets/images/R2.jpg"},
      {id:3,"name": "El Arij", "address":"Rades","image":"../../assets/images/R3.jpg"},
      {id:4,"name": "El Anber","address":"Manzah 5", "image":"../../assets/images/R4.jpg"}

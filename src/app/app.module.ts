@@ -19,6 +19,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, ResidenceComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
