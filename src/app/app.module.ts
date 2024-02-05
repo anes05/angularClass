@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ResidenceComponent } from './core/residence/residence.component';
 import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AppartementComponent } from './appartement/appartement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResidenceComponent,
-    TestComponent
+    TestComponent,
+    NotFoundComponent,
+    AppartementComponent,
   ],
   imports: [
     BrowserModule,
