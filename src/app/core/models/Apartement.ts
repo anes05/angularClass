@@ -11,3 +11,4 @@ export class Apartement{
     description!: string;
     residence!:Residence;
 }
+//the ! after the naming of the variable in them ode above means that its value will be set later
