@@ -8,6 +8,7 @@ import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppartementComponent } from './appartement/appartement.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppartementComponent } from './appartement/appartement.component';
     TestComponent,
     NotFoundComponent,
     AppartementComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

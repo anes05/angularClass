@@ -2,13 +2,19 @@
 <ul>
     <li *ngFor="let r of listResidences; let i =index; let f=first; let l=last">
 
-    index : {{i}} -  {{r.name}} - {{r.address}} - <img [src]="r.image" >- <button (click)="show(r.id)">show appartements </button>
+    index : {{i}} -  {{r.name}} - {{r.address}} -
+     <img [src]="r.image" > - 
+     <button (click)="showAge(r)" [disabled]="r.age>20" >age </button>-<button (click)="show(r.id)">show appartements </button>-
+     <a [routerLink]="['details', r.id]"> show details </a> 
     <div *ngFor="let appartement of list">
+        
         <li *ngIf="r.id == appartement.residence.id">
             {{appartement.appartNum}}
+            
         </li>
     </div>
 
 
      </li>
 </ul>
+<router-outlet></router-outlet>

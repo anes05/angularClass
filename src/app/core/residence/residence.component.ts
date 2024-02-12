@@ -12,17 +12,22 @@ export class ResidenceComponent {
 show(id:number) {
   this.list=[];
   for(let a of this.listApartments){
-    if (a.residence.id==id){
-      this.list.push(a);
+    if(a.residence.id == id){
+      this.list.push(a)
     }
   }
   console.log(this.list);
+
+}
+
+showAge(r:Residence){
+  console.log(r.age);
 }
   listResidences:Residence[]=[
-    {id:1,"name": "El fel","address":"Borj Cedria", "image":"../../assets/images/OIP.jpeg"},
-     {id:2,"name": "El yasmine", "address":"Ezzahra","image":"../../assets/images/R2.jpg"},
-     {id:3,"name": "El Arij", "address":"Rades","image":"../../assets/images/R3.jpg"},
-     {id:4,"name": "El Anber","address":"Manzah 5", "image":"../../assets/images/R4.jpg"}
+    {id:1,"name": "El fel","address":"Borj Cedria", "image":"../../assets/images/OIP.jpeg", age:18},
+     {id:2,"name": "El yasmine", "address":"Ezzahra","image":"../../assets/images/R2.jpg", age:20},
+     {id:3,"name": "El Arij", "address":"Rades","image":"../../assets/images/R3.jpg", age:25},
+     {id:4,"name": "El Anber","address":"Manzah 5", "image":"../../assets/images/R4.jpg", age:30}
    ];
 
    listApartments:Apartement[]=[
