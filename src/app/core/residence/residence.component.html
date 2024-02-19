@@ -5,16 +5,14 @@
     index : {{i}} -  {{r.name}} - {{r.address}} -
      <img [src]="r.image" > - 
      <button (click)="showAge(r)" [disabled]="r.age>20" >age </button>-<button (click)="show(r.id)">show appartements </button>-
-     <a [routerLink]="['details', r.id]"> show details </a> 
+     <a [routerLink]="['details', r.id]"> show details </a> <button (click)="deleteResidence(r.id)">delete </button>
     <div *ngFor="let appartement of list">
         
         <li *ngIf="r.id == appartement.residence.id">
             {{appartement.appartNum}}
-            
         </li>
     </div>
-
-
      </li>
 </ul>
+<button (click)="goto()" >go to Test</button>
 <router-outlet></router-outlet>

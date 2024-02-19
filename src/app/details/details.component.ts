@@ -23,7 +23,5 @@ export class DetailsComponent {
         this.id=Number(res.get('id'));
         console.log(this.id);
     }));
-
   }
-
 }
